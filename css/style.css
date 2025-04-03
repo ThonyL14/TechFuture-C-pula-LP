@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Tint&display=swap');
+
+:root{
+    --var-black: #000;
+    --var-lightblue: #a0d2eb;
+    --var-white: #fff;
+    --var-blue: #0049b7e8;
+    --var-red: #c70000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-rows: auto 95vh auto auto auto;
+    grid-template-columns: 1fr;
+    min-height: 100dvh;
+}
+.header{
+    background: var(--var-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+nav ul li{
+    margin: 0 15px;
+}
+nav ul li a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: var(--var-white);
+    
+}
+nav ul li a:hover{
+   color: var(--var-red);
+}
+.logo{
+
+    font-family: "Bungee Tint", sans-serif;
+}
+
+/*Hero section*/
+
+.hero{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.795) ), url(https://wallpapers.com/images/hd/4k-tech-wijwmfq6gxe3qf1m.jpg) no-repeat center center/cover ;
+}
+.hero h1{
+    font-family: "Bungee", sans-serif;
+    color: var(--var-white);
+    font-size: 2.5rem;
+}
+
+
+/*Sobre o Evento*/
+.sobre-nos {
+    background-color: var(--var-lightblue);
+    text-align: center;
+    padding:40px 20px;
+}
+
+.sobre-nos h1 {
+    font-family: "Bungee", sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.image-side img {
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.671);
+}
+
+.image-side img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-side {
+    max-width: 500px;
+    text-align: left;
+}
+
+.text-side p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.text-side img:hover{
+    transform: translateY(-7px);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+#evento-text{
+    margin-left: 27px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+/*Palestrantes*/
+.palestrantes {
+    text-align: center;
+    padding: 50px;
+}
+
+.palestrantes h1 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.cards-palestrantes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 400px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+
+/*Formulário*/
+.inscreva-se {
+    background-color: var(--var-lightblue); 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.inscreva-se h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: var(--var-blue);
+    box-shadow: 0px 0px 8px var(--var-blue);
+}
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 10px;
+}
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 60px;
+}
+
+
+.terms {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    width: 100%; 
+    padding: 8px;
+    text-align: left; 
+}
+
+button {
+    background: var(--var-blue);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--var-lightblue);
+}
+
+
+.footer {
+    background-color: var(--var-white);
+    color: var(--var-black);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+
